@@ -1,0 +1,267 @@
+/**
+ * ----------------------------------
+ * Grid System
+ * ----------------------------------
+ */
+
+$namespace: 'os-';
+$max-width: 1024px;
+$columns: 12;
+$gutter: 20px;
+$breakpoints: (
+    'sm' : 500px,
+    'md' : 768px,
+    'lg' : 1000px,
+    'xl' : 1400px
+);
+
+
+// Container
+// ---------------------------------- //
+.#{$namespace}l-container {
+    width: 100%;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+// Grid
+// ---------------------------------- //
+.#{$namespace}l-grid {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-column-gap: $gutter;
+}
+
+// Grid Item
+// ---------------------------------- //
+.#{$namespace}l-cell {
+    display: block;
+    grid-column-start: auto;
+    grid-column-end: span $columns;
+
+    @for $i from 1 through $columns {
+
+        &.col-#{$i} {
+            grid-column-end: span $i;
+        }
+        &.start-#{$i} {
+            grid-column-start: $i;
+        }
+
+    }
+
+    @each $bp, $size in $breakpoints {
+
+        @media only screen and (min-width: $size) {
+
+            @for $i from 1 through $columns {
+
+                &.col-#{$i}-#{$bp} {
+                    grid-column-end: span $i;
+                }
+                &.start-#{$i}-#{$bp} {
+                    grid-column-start: $i;
+                }
+        
+            }
+
+        }
+        
+    }
+
+}
+
+
+
+// Grid Fractional Spans
+// ---------------------------------- //
+
+// [class*="os-l-span-"] {
+//     flex-grow: 0;
+//     flex-basis: 100%;
+// }
+
+// .os-l-span-quarter {
+//     flex-basis: calc(25% - #{$gutter});
+// }
+// .os-l-span-third {
+//     flex-basis: calc(33.333% - #{$gutter});
+// }
+// .os-l-span-half {
+//     flex-basis: calc(50% - #{$gutter});
+// }
+// .os-l-span-two-thirds {
+//     flex-basis: calc(66.666% - #{$gutter});
+// }
+// .os-l-span-three-quarters {
+//     flex-basis: calc(75% - #{$gutter});
+// }
+
+// @include media($sm) {
+//     .os-l-span-quarter-sm {
+//         flex-basis: calc(25% - #{$gutter});
+//     }
+//     .os-l-span-third-sm {
+//         flex-basis: calc(33.333% - #{$gutter});
+//     }
+//     .os-l-span-half-sm {
+//         flex-basis: calc(50% - #{$gutter});
+//     }
+//     .os-l-span-two-thirds-sm {
+//         flex-basis: calc(66.666% - #{$gutter});
+//     }
+//     .os-l-span-three-quarters-sm {
+//         flex-basis: calc(75% - #{$gutter});
+//     }
+// }
+
+// @include media($md) {
+//     .os-l-span-quarter-md {
+//         flex-basis: calc(25% - #{$gutter});
+//     }
+//     .os-l-span-third-md {
+//         flex-basis: calc(33.333% - #{$gutter});
+//     }
+//     .os-l-span-half-md {
+//         flex-basis: calc(50% - #{$gutter});
+//     }
+//     .os-l-span-two-thirds-md {
+//         flex-basis: calc(66.666% - #{$gutter});
+//     }
+//     .os-l-span-three-quarters-md {
+//         flex-basis: calc(75% - #{$gutter});
+//     }
+// }
+
+// @include media($lg) {
+//     .os-l-span-quarter-lg {
+//         flex-basis: calc(25% - #{$gutter});
+//     }
+//     .os-l-span-third-lg {
+//         flex-basis: calc(33.333% - #{$gutter});
+//     }
+//     .os-l-span-half-lg {
+//         flex-basis: calc(50% - #{$gutter});
+//     }
+//     .os-l-span-two-thirds-lg {
+//         flex-basis: calc(66.666% - #{$gutter});
+//     }
+//     .os-l-span-three-quarters-lg {
+//         flex-basis: calc(75% - #{$gutter});
+//     }
+// }
+
+
+
+// // Grid Column Spans
+// // ---------------------------------- //
+
+// @for $i from 1 through $columns {
+
+//     .os-l-span-#{$i} {
+//         flex-basis: os-span( $i );
+//     }
+
+// }
+
+// @for $i from 1 through $columns {
+
+//     @include media($sm) {
+//         .os-l-span-#{$i}-sm {
+//             flex-basis: os-span( $i );
+//         }
+//     }
+
+// }
+
+// @for $i from 1 through $columns {
+
+//     @include media($md) {
+//         .os-l-span-#{$i}-md {
+//             flex-basis: os-span( $i );
+//         }
+//     }
+
+// }
+
+// @for $i from 1 through $columns {
+
+//     @include media($lg) {
+//         .os-l-span-#{$i}-lg {
+//             flex-basis: os-span( $i );
+//         }
+//     }
+
+// }
+
+// @for $i from 1 through $columns {
+
+//     @include media($xl) {
+//         .os-l-span-#{$i}-xl {
+//             flex-basis: os-span( $i );
+//         }
+//     }
+
+// }
+
+
+
+// // Grid Column Offsets
+// // ---------------------------------- //
+// @for $i from 1 through $columns {
+//     .os-l-offset-#{$i} {
+//         margin-left: calc( #{ $i/12 * 100% } + #{ $gutter/2 } );
+//     }
+// }
+// @for $i from 1 through $columns {
+//     @include media($sm) {
+//         .os-l-offset-#{$i}-sm {
+//             margin-left: calc( #{ $i/12 * 100% } + #{ $gutter/2 } );
+//         }
+//     }
+// }
+// @for $i from 1 through $columns {
+//     @include media($md) {
+//         .os-l-offset-#{$i}-md {
+//             margin-left: calc( #{ $i/12 * 100% } + #{ $gutter/2 } );
+//         }
+//     }
+// }
+// @for $i from 1 through $columns {
+//     @include media($lg) {
+//         .os-l-offset-#{$i}-lg {
+//             margin-left: calc( #{ $i/12 * 100% } + #{ $gutter/2 } );
+//         }
+//     }
+// }
+// @for $i from 1 through $columns {
+//     @include media($xl) {
+//         .os-l-offset-#{$i}-xl {
+//             margin-left: calc( #{ $i/12 * 100% } + #{ $gutter/2 } );
+//         }
+//     }
+// }
+
+
+
+
+// // Visual Grid Columns
+// // ---------------------------------- //
+// .os-l-visual-grid {
+//     position: relative;
+    
+//     &:before {
+//         content: "";
+//         background: repeating-linear-gradient(to right, transparent, transparent $gutter, rgba(18, 109, 181, 0.1) $gutter, rgba(18, 109, 181, 0.1) #{ 1/$columns * 100% });
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: -$gutter/2;
+//         right: $gutter/2;
+//         bottom: 0;
+//         z-index: 0;
+//     }
+// }
