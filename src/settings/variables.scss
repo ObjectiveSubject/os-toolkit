@@ -1,0 +1,24 @@
+/**
+ * ----------------------------------
+ * Variables
+ * ----------------------------------
+ */
+
+$namespace: 'os-';
+
+// Layout
+
+$max-width: 1024px;
+$columns: 12;
+$gutter: 20px;
+$breakpoints: (
+    'sm' : 500px,
+    'md' : 768px,
+    'lg' : 1000px,
+    'xl' : 1400px
+);
+
+// Colors
+
+$color-selection-text: black;
+$color-selection-bg: magenta;

@@ -1,0 +1,30 @@
+
+// Media queries
+// ------------------------------------- //
+@mixin media($size, $minmax: min) {
+  @media screen and (#{$minmax}-width: $size) {
+      @content;
+  }
+}
+
+// Selection
+// ------------------------------------- //
+@mixin selection($current-selector: false) {
+    @if $current-selector {
+      &::-moz-selection {
+        @content;
+      }
+  
+      &::selection {
+        @content;
+      }
+    } @else {
+      ::-moz-selection {
+        @content;
+      }
+  
+      ::selection {
+        @content;
+      }
+    }
+  }

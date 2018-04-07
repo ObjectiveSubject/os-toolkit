@@ -1,0 +1,41 @@
+/**
+ * -------------------------------------
+ * Document
+ * -------------------------------------
+ */
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	
+	// In javascript, we can query the value of the "content" property on this pseudo element.
+	// Useful when we want to conditionally program javascript based on viewport width 
+	&:before {
+		content: "default";
+		display: none;
+    }
+    
+    @each $bp, $size in $breakpoints {
+
+        @include media($size) {
+            &:before {
+                content: $bp;
+            }
+        }
+
+    }
+	
+}
+
+@include selection {
+	color: $color-selection-text;
+    background: $color-selection-bg;
+}
