@@ -6,7 +6,7 @@
 
 // Container
 // ---------------------------------- //
-.#{$namespace}l-container {
+.#{$namespace}-l-container {
     width: 100%;
     max-width: $max-width;
     margin-left: auto;
@@ -17,7 +17,7 @@
 
 // Grid
 // ---------------------------------- //
-.#{$namespace}l-grid {
+.#{$namespace}-l-grid {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
     grid-column-gap: $gutter;
@@ -25,7 +25,7 @@
 
 // Grid Item
 // ---------------------------------- //
-.#{$namespace}l-cell {
+.#{$namespace}-l-cell {
     display: block;
     grid-column-start: auto;
     grid-column-end: span $columns;

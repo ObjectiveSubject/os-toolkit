@@ -1,0 +1,25 @@
+// Standard Button
+// ------------------------------------------ //
+
+.#{$namespace}-b-btn {
+	transition: all $duration $easing;
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid black;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color-text-main;
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem(16);
+    line-height: 0;
+    margin-top: 0;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    text-shadow: none;
+	
+	&:hover {
+        background-color: rgba(black, 0.1);
+	}
+
+}

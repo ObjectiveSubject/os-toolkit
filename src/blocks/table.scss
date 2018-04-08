@@ -1,0 +1,51 @@
+
+/* Table
+ * ---------------------------------------- */
+
+ .#{$namespace}-b-table {
+    width: 100%;
+    
+    td, th {
+        padding: 0.5rem;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    thead th {
+        @extend .#{$namespace}-h4;
+        margin-top: 0;
+        border-bottom: 1px solid;
+        
+    }
+    tfoot th {
+        border-top: 1px solid;
+    }
+}
+
+.#{$namespace}-b-table--striped {
+    @extend .#{$namespace}-b-table;
+    
+    td, th {
+        padding: 0.5rem;
+        &:first-child, &:last-child {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+    
+    tbody > tr:nth-child(odd) {
+        background: rgba(black, 0.05);
+    }
+}
+
+.#{$namespace}-is-hoverable {
+    &.#{$namespace}-b-table,
+    &.#{$namespace}-b-table--striped {
+        tbody tr:hover td {
+            background: rgba(black, 0.1);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.#{$namespace}-b-input {
+    display: block;
+    width: 100%;
+    color: $color-text-main;
+    border: 1px solid lightgray;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 0.5em;
+    outline: 0;
+    transition: all $duration $easing;
+    @include placeholder {
+        color: lightgray;
+    }
+
+    &:hover {
+        color: $color-active;
+    }
+    &:focus {
+        border-color: $color-active;
+        color: $color-active;
+    }
+
+}
