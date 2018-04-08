@@ -1,0 +1,28 @@
+/* Media Size indicator
+ *
+ * Used to display the current media size.
+ * See footer.php for the element.
+ * ---------------------------------------- */
+ .media-size  {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: rgba(white, 0.25);
+	padding: 5px;
+	color: #bbb;
+	font-size: 12px;
+    
+    &:before {
+		content: "default";
+    }
+    
+    @each $bp, $size in $breakpoints {
+        @include media($size) {
+            &:before {
+                content: $bp;
+            }
+        }
+    }
+
+}

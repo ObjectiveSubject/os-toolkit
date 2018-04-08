@@ -2,9 +2,21 @@
 // Media queries
 // ------------------------------------- //
 @mixin media($size, $minmax: min) {
-  @media screen and (#{$minmax}-width: $size) {
+  
+  @if map-has-key( $breakpoints, $size ) {
+
+    @media screen and (#{$minmax}-width: #{ map-get($breakpoints,$size) }) {
       @content;
+    }
+
+  } @else {
+
+    @media screen and (#{$minmax}-width: $size) {
+        @content;
+    }
+
   }
+
 }
 
 // Selection

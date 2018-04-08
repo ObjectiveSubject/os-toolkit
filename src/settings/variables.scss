@@ -7,7 +7,7 @@
 $namespace: 'os-';
 
 // Layout
-
+//
 $max-width: 1024px;
 $columns: 12;
 $gutter: 20px;
@@ -17,8 +17,21 @@ $breakpoints: (
     'lg' : 1000px,
     'xl' : 1400px
 );
+$spacer: 1.5rem;
 
 // Colors
-
-$color-selection-text: black;
+//
+$color-text-main: #222;
+$color-active: royalblue;
+$color-selection-text: $color-text-main;
 $color-selection-bg: magenta;
+
+// Typography
+//
+$font-main: sans-serif;
+$leading: 1.5;
+
+// Effects
+//
+$duration: 300ms;
+$easing: ease-out;
