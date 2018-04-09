@@ -11,94 +11,354 @@
             font-size: 100%;
         }
         body {
-            margin: 2rem;
             font-size: 1.125rem;
             line-height: 1.5;
         }
-        .os-l-container {
-            outline: 1px dotted rgba(0,0,0,0.5);
-            padding-top: 24px;
-            padding-bottom: 24px;
-        }
-        .os-l-grid {
-            outline: 1px dotted rgba(0,0,0,0.5);
-        }
         .os-l-cell {
-            outline: 1px dotted rgba(0,0,0,0.5);
+            /* outline: 1px dotted rgba(0,0,0,0.5); */
             text-align: center;
             margin-top: 20px;
             margin-bottom: 20px;
+            background: lavender;
+            line-height: 3;
+        }
+        .font-mono {
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
     
     <div class="os-l-container">
-        
-        <div class="os-l-grid" style="margin-top:5rem">
+        <h1>OS Toolkit</h1>
 
-            <div class="os-l-cell col-6-md col-5-lg">Cell</div>
-            <div class="os-l-cell col-6-md col-5-lg start-8-lg">Cell</div>
-            <div class="os-l-cell col-6-md col-5-lg">Cell</div>
-            <div class="os-l-cell col-6-md col-5-lg start-8-lg">Cell</div>
-            <div class="os-l-cell col-6-md col-5-lg">Cell</div>
-            <div class="os-l-cell col-6-md col-5-lg start-8-lg">Cell</div>
+        <hr/>
+
+        <h1 id="typography" class="os-l-my-4">Typography</h1>
+
+        <h1>H1. Fusce sed molestie eros cras non justo nunc.</h1>
+
+        <h2>H2. Nulla eleifend tortor vitae lorem accumsan</h2>
+        
+        <h3>H3. Aenean at volutpat urna, quis mattis augue. Maecenas tincidunt sollicitudin bibendum.</h3>
+        
+        <h4>H4. Aenean at volutpat urna, quis mattis augue. Maecenas tincidunt sollicitudin bibendum.</h4>
+        
+        <h5>H5. Aenean at volutpat urna, quis mattis augue. Maecenas tincidunt sollicitudin bibendum.</h5>
+        
+        <h6>H6. Aenean at volutpat urna, quis mattis augue. Maecenas tincidunt sollicitudin bibendum.</h6>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Morbi justo lorem</a>, congue eu ipsum eu, feugiat ornare ex. Nulla eleifend tortor vitae lorem accumsan, ac pellentesque elit pretium. Mauris ac ipsum eros. Suspendisse dolor mi, viverra sit amet diam in, convallis tempus ex. Ut cursus mi vel lacus facilisis suscipit. Curabitur facilisis turpis in augue finibus, eu congue magna condimentum.</p>
+        
+        <blockquote>
+            Blockquote, massa ut fermentum maximus, nisl libero eleifend odio, ornare consectetur massa velit vel tellus.
+            <cite>Quote Source</cite>
+        </blockquote>
+        
+        <p>Aenean at volutpat urna, quis mattis augue. Maecenas tincidunt sollicitudin bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur et interdum sem, et convallis lacus. Fusce efficitur, massa ut fermentum maximus, nisl libero eleifend odio, ornare consectetur massa velit vel tellus. Morbi rhoncus arcu at orci blandit, non dapibus est vestibulum. Fusce in vestibulum metus. Sed gravida eu mi non pharetra. Suspendisse egestas nibh imperdiet augue iaculis posuere. Donec bibendum diam rhoncus, porta nulla nec, facilisis est. Donec in erat nec odio venenatis faucibus et ac nunc.</p>
+        
+
+        
+        <h1 id="unordered-lists" class="os-l-mt-6">Unordered Lists</h1>
+        
+        <ul>
+            <li>This is a list item in an unordered list</li>
+            <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
+            <li>
+                Lists can be nested inside of each other
+                <ul>
+                    <li>
+                        This is a nested list item
+                        <ul>
+                            <li>This is a nested list item</li>
+                            <li>This is another nested list item in an unordered list</li>
+                        </ul>
+                    </li>
+                    <li>This is another nested list item in an unordered list</li>
+                </ul>
+            </li>
+            <li>This is the last list item</li>
+        </ul>
+        
+        <h1 id="ordered-lists" class="os-l-mt-6">Ordered Lists</h1>
+        
+        <ol>
+            <li>This is a list item in an ordered list</li>
+            <li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
+            <li>
+                Lists can be nested inside of each other
+                <ol>
+                    <li>
+                        This is a nested list item
+                        <ol>
+                            <li>This is a nested list item</li>
+                            <li>This is another nested list item in an ordered list</li>
+                        </ol>
+                    </li>
+                    <li>This is another nested list item in an ordered list</li>
+                </ol>
+            </li>
+            <li>This is the last list item</li>
+        </ol>
+        
+        
+        <h1 id="code" class="os-l-mt-6">Preformatted & code</h1>
+
+        <p>Aenean at volutpat urna, quis mattis augue. <code>Maecenas tincidunt sollicitudin bibendum</code>. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        
+        <pre>
+.example {
+    display: block;
+    margin: 1em;
+    float: left;
+}</pre>
+        
+
+        
+        <h1 id="form-fields" class="os-l-mt-6">Form Fields</h1>
+
+        <p>Use classname <code>os-b-input</code> on input and textarea elements</p>
+        
+        <form>
+            <p>
+                <label class="os-b-label" for="text">Text Input <abbr title="Required">*</abbr></label>
+                <input id="text" type="text" class="os-b-input" placeholder="Text Input">
+<pre>
+&lt;input type="text" class="os-b-input" placeholder="Text Input"&gt;
+</pre>
+            </p>
+            <p>
+            <label class="os-b-label" for="password">Password</label>
+            <input id="password" type="password" class="os-b-input" placeholder="Type your Password">
+            </p>
+            <p>
+            <label class="os-b-label" for="webaddress">Web Address</label>
+            <input id="webaddress" type="url" class="os-b-input" placeholder="http://yoursite.com">
+            </p>
+            <p>
+            <label class="os-b-label" for="emailaddress">Email Address</label>
+            <input id="emailaddress" type="email" class="os-b-input" placeholder="name@email.com">
+            </p>
+            <p>
+            <label class="os-b-label" for="search">Search</label>
+            <input id="search" type="search" class="os-b-input" placeholder="Enter Search Term">
+            </p>
+            <p>
+            <label class="os-b-label" for="number">Number Input <abbr title="Required">*</abbr></label>
+            <input id="number" type="number" class="os-b-input" placeholder="Enter a Number" pattern="[0-9]*">
+            </p>
+            <p>
+            <label class="os-b-label" for="textarea">Textarea</label>
+            <textarea id="textarea" class="os-b-input" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+            </p>
+                
+        </form>
+        
+        
+        
+        <h1 id="buttons" class="os-l-mt-6">Buttons</h1>
+
+        <p><input id="submit" value="Standard button" type="button" class="os-b-btn"/></p>
+        
+        
+        
+        <h1 id="tables" class="os-l-mt-6">Tables</h1>
+        
+        <h4>Default</h4>
+        
+        <pre><code>&lt;table class="os-b-table"&gt;</code></pre>
+        
+        <table class="os-b-table">
+            <thead>
+                <tr>
+                    <th>Table Heading 1</th>
+                    <th>Table Heading 2</th>
+                    <th>Table Heading 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Table Footer 1</th>
+                    <th>Table Footer 2</th>
+                    <th>Table Footer 3</th>
+                </tr>
+            </tfoot>
+        </table>
+        
+        
+
+        <h1 id="grid" class="os-l-mt-6">Grid System</h1>
+        
+        <pre>
+&lt;!-- Example --&gt;
+
+&lt;div class="os-l-grid"&gt;
+    &lt;div class="os-l-cell col-6"&gt;.col-6&lt;/div&gt;
+    &lt;div class="os-l-cell col-6"&gt;.col-6&lt;/div&gt;
+&lt;/div&gt;            
+</pre>
+
+
+        <div class="os-l-grid os-l-mt-3">
+
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
+
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+
+            <div class="os-l-cell font-mono col-3">.col-3</div>
+            <div class="os-l-cell font-mono col-3">.col-3</div>
+            <div class="os-l-cell font-mono col-3">.col-3</div>
+            <div class="os-l-cell font-mono col-3">.col-3</div>
+            
+            <div class="os-l-cell font-mono col-4">.col-4</div>
+            <div class="os-l-cell font-mono col-4">.col-4</div>
+            <div class="os-l-cell font-mono col-4">.col-4</div>
+            
+            <div class="os-l-cell font-mono col-5">.col-5</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-5">.col-5</div>
+            
+            <div class="os-l-cell font-mono col-6">.col-6</div>
+            <div class="os-l-cell font-mono col-6">.col-6</div>
+
+            <div class="os-l-cell font-mono col-7">.col-7</div>
+            <div class="os-l-cell font-mono col-5">.col-5</div>
+
+            <div class="os-l-cell font-mono col-8">.col-8</div>
+            <div class="os-l-cell font-mono col-4">.col-4</div>
+
+            <div class="os-l-cell font-mono col-9">.col-9</div>
+            <div class="os-l-cell font-mono col-3">.col-3</div>
+
+            <div class="os-l-cell font-mono col-10">.col-10</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+
+            <div class="os-l-cell font-mono col-11">.col-11</div>
+            <div class="os-l-cell font-mono col-1">.col-1</div>
 
         </div>
 
-        <div class="os-l-grid" style="margin-top:5rem">
+        <h3 class="os-l-mt-4">With offsets</h3>
 
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
+        <div class="os-l-grid">
 
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
+            <div class="os-l-cell font-mono col-2">.col-2</div>
+            <div class="os-l-cell font-mono col-2 start-4">.col-2.start-4</div>
+            <div class="os-l-cell font-mono col-2 start-8">.col-2.start-8</div>
+            <div class="os-l-cell font-mono col-2 start-11">.col-2.start-11</div>
 
-            <div class="os-l-cell col-3">Cell</div>
-            <div class="os-l-cell col-3">Cell</div>
-            <div class="os-l-cell col-3">Cell</div>
-            <div class="os-l-cell col-3">Cell</div>
-            
-            <div class="os-l-cell col-4">Cell</div>
-            <div class="os-l-cell col-4">Cell</div>
-            <div class="os-l-cell col-4">Cell</div>
-            
-            <div class="os-l-cell col-5">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
-            <div class="os-l-cell col-5">Cell</div>
-            
-            <div class="os-l-cell col-6">Cell</div>
-            <div class="os-l-cell col-6">Cell</div>
+            <div class="os-l-cell font-mono col-6 col-5-lg start-2-lg">.col-6.col-4-lg.start-3-lg</div>
+            <div class="os-l-cell font-mono col-6 col-5-lg">.col-6.col-4-lg</div>
 
-            <div class="os-l-cell col-7">Cell</div>
-            <div class="os-l-cell col-5">Cell</div>
+            <div class="os-l-cell font-mono col-6 col-4-lg start-3-lg">.col-6.col-4-lg.start-3-lg</div>
+            <div class="os-l-cell font-mono col-6 col-4-lg">.col-6.col-4-lg</div>
 
-            <div class="os-l-cell col-8">Cell</div>
-            <div class="os-l-cell col-4">Cell</div>
+            <div class="os-l-cell font-mono col-11 start-2">.col-11.start-2</div>
+            <div class="os-l-cell font-mono col-10 start-3">.col-10.start-3</div>
+            <div class="os-l-cell font-mono col-9 start-4">.col-9.start-4</div>
+            <div class="os-l-cell font-mono col-8 start-5">.col-8.start-5</div>
+            <div class="os-l-cell font-mono col-7 start-6">.col-7.start-6</div>
+            <div class="os-l-cell font-mono col-6 start-7">.col-6.start-7</div>
+            <div class="os-l-cell font-mono col-5 start-8">.col-5.start-8</div>
+            <div class="os-l-cell font-mono col-4 start-9">.col-4.start-9</div>
+            <div class="os-l-cell font-mono col-3 start-10">.col-3.start-10</div>
+            <div class="os-l-cell font-mono col-2 start-11">.col-2.start-11</div>
+            <div class="os-l-cell font-mono col-1 start-12">.col-1.start-12</div>
 
-            <div class="os-l-cell col-9">Cell</div>
-            <div class="os-l-cell col-3">Cell</div>
+        </div>
 
-            <div class="os-l-cell col-10">Cell</div>
-            <div class="os-l-cell col-2">Cell</div>
 
-            <div class="os-l-cell col-11">Cell</div>
-            <div class="os-l-cell col-1">Cell</div>
 
+        <h1 id="spacing" class="os-l-mt-6">Spacing System</h1>
+
+        <p>The toolkit allows you to specify spacing (margin and/or padding) for an element. To specify the spacing direction, use the following class names where <code>$n</code> is the spacing size:</p>
+        <ul>
+            <li><code>os-l-ma-$n</code> all 4 directions</li>
+            <li><code>os-l-mx-$n</code> left and right</li>
+            <li><code>os-l-my-$n</code> top and bottom</li>
+            <li><code>os-l-mt-$n</code> top</li>
+            <li><code>os-l-mb-$n</code> bottom</li>
+            <li><code>os-l-ml-$n</code> left</li>
+            <li><code>os-l-mr-$n</code> right</li>
+        </ul>
+
+        <p>The spacing system incorporates a scale of 6 steps. Use "0", "nudge", "auto", or the numbers "1" through "6" to specify the amount of space for an element.</p>
+
+        <p><strong>Top margin example:</strong></p>
+
+        <div class="os-l-grid">
+
+            <div class="os-l-cell col-6">
+                <div class="os-l-mt-0 font-mono" style="background:coral">.os-l-mt-0</div>
+            </div>
+            <div class="os-l-cell col-6">
+                <div class="os-l-mt-nudge font-mono" style="background:coral">.os-l-mt-nudge</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-1 font-mono" style="background:coral">.os-l-mt-1</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-2 font-mono" style="background:coral">.os-l-mt-2</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-3 font-mono" style="background:coral">.os-l-mt-3</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-4 font-mono" style="background:coral">.os-l-mt-4</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-5 font-mono" style="background:coral">.os-l-mt-5</div>
+            </div>
+            <div class="os-l-cell col-2">
+                <div class="os-l-mt-6 font-mono" style="background:coral">.os-l-mt-6</div>
+            </div>
+
+        </div>
+
+        <p><strong>Auto margin example:</strong></p>
+
+        <div class="os-l-mt-1" style="outline: 1px dotted">
+            <div class="font-mono os-l-mx-auto" style="background:coral;text-align:center;max-width:400px;line-height:3">
+                .os-l-mx-auto[style="max-width:400px"]
+            </div>
         </div>
 
     </div>
